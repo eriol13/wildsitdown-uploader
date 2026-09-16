@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wild Sit Down Uploader</title>
+<style>
+  :root { color-scheme: light dark; --fg:#111; --muted:#555; --bg:#fff; --line:#e3e3e3; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e8e8e8; --muted:#a0a0a0; --bg:#141414; --line:#2e2e2e; } }
+  body { margin:0; padding:48px 16px; background:var(--bg); color:var(--fg);
+         font:16px/1.7 -apple-system, "Segoe UI", system-ui, sans-serif; }
+  main { max-width:640px; margin:0 auto; }
+  h1 { font-size:1.6rem; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 32px; }
+  h2 { font-size:1.05rem; margin:32px 0 8px; }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+  a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Wild Sit Down Uploader</h1>
+  <p class="sub">A personal command-line tool that uploads finished videos to its operator's own YouTube channel.</p>
+
+  <h2>What it does</h2>
+  <p>
+    This is a single-user desktop tool. It takes a video file that the operator has already produced on
+    their own computer, together with a title, description and tags, and uploads it to the operator's own
+    YouTube channel using the YouTube Data API.
+  </p>
+
+  <h2>Who uses it</h2>
+  <p>
+    Only its operator, on their own machine, for their own channel. It is not distributed, not offered as a
+    service, and has no other users or accounts.
+  </p>
+
+  <h2>What access it requests</h2>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/youtube.upload</code> — the single scope required to upload a
+        video to the signed-in channel.</li>
+  </ul>
+  <p>It does not read, modify or delete existing videos, and requests no other Google data.</p>
+
+  <h2>Privacy</h2>
+  <p>See the <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer>Contact: {{CONTACT_EMAIL}}</footer>
+</main>
+</body>
+</html>
